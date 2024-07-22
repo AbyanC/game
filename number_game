@@ -1,0 +1,23 @@
+import random
+
+guess = 0
+n = random.randint(1,100)
+
+while guess != n:
+  guess = input("Guess the random number between 1 and 100: ")
+  guess = int(guess)
+  if guess == n:
+    print("You guessed the number!")
+  elif guess > 100 or guess < 1:
+    print("Choose a number between 1 and 100")
+  else:
+    if abs(guess - n) <= 5:
+      print("You're Very Hot")
+    elif abs(guess - n) > 5 and abs(guess - n) <= 10:
+      print("You're hot")
+    elif abs(guess - n) > 10 and abs(guess - n) <= 20:
+      print("You're warm")
+    elif abs(guess - n) > 20 and abs(guess - n) <= 50: 
+      print("You're Cold")
+    else:
+      print("You're Very Cold")
